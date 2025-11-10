@@ -15,6 +15,7 @@ services:
 
   CadNutriSubModule:
     build: ./CadNutriSubModule
+    image: orquestradorcadnutri-cadnutrisubmodule
     container_name: CadNutriApp
     restart: unless-stopped
     ports:
