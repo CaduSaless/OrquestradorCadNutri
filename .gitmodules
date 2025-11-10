@@ -1,0 +1,3 @@
+[submodule "CadNutriSubModule"]
+	path = CadNutriSubModule
+	url = https://github.com/CaduSaless/CadNutriSubModule.git

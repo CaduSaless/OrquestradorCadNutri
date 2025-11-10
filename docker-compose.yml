@@ -13,5 +13,16 @@ services:
     volumes:
       - CadNutriDATA:/var/lib/postgresql/data
 
+  CadNutriSubModule:
+    build: ./CadNutriSubModule
+    container_name: CadNutriApp
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    environment:
+      URL_REDIRECTS: http://CadNutriSubModule:80
+    depends_on:
+      - CadNutriDB
+
 volumes:
   CadNutriDATA:
