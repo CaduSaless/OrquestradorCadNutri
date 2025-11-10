@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   CadNutriDB:
     image: postgres:16
@@ -12,6 +13,8 @@ services:
       - "5431:5432"
     volumes:
       - CadNutriDATA:/var/lib/postgresql/data
+    networks:
+      - cadnutri_net
 
   CadNutriSubModule:
     build: ./CadNutriSubModule
@@ -19,11 +22,18 @@ services:
     container_name: CadNutriApp
     restart: unless-stopped
     ports:
-      - "80:80"
+      - "5000:5000"
     environment:
       URL_REDIRECTS: http://CadNutriSubModule:80
+      DB_HOST: CadNutriDB
     depends_on:
       - CadNutriDB
+    networks:
+      - cadnutri_net
 
 volumes:
   CadNutriDATA:
+
+networks:
+  cadnutri_net:
+    driver: bridge
