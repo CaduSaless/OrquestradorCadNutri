@@ -4,3 +4,6 @@
 [submodule "services/CadNutriSubModuleAltura"]
 	path = CadNutriSubModuleAltura
 	url = git@github.com:Heitormonteiroo/CadNutriSubModuleAltura.git
+[submodule "CadNutriSubModulePeso"]
+	path = CadNutriSubModulePeso
+	url = git@github.com:Heitormonteiroo/CadNutriSubModulePeso.git
