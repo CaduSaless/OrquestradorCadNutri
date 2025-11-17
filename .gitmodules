@@ -7,3 +7,5 @@
 [submodule "CadNutriSubModulePeso"]
 	path = CadNutriSubModulePeso
 	url = https://github.com/Heitormonteiroo/CadNutriSubModulePeso.git
+[submodule "CadNutriSubModuleAltura"]
+	url = https://github.com/Heitormonteiroo/CadNutriSubModuleAltura.git
