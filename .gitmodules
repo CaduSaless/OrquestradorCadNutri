@@ -2,5 +2,5 @@
 	path = CadNutriSubModule
 	url = https://github.com/CaduSaless/CadNutriSubModule.git
 [submodule "services/CadNutriSubModuleAltura"]
-	path = services/CadNutriSubModuleAltura
+	path = CadNutriSubModuleAltura
 	url = git@github.com:Heitormonteiroo/CadNutriSubModuleAltura.git
