@@ -31,6 +31,16 @@ services:
     networks:
       - cadnutri_net
 
+  CadNutriSubModuleAltura:
+    build: ./CadNutriSubModuleAltura
+    image: orquestradorcadnutri-cadnutrisubmodulealtura
+    container_name: CadNutriAppAltura
+    restart: unless-stopped
+    ports:
+      - "5001:5000" 
+    networks:
+      - cadnutri_net
+
 volumes:
   CadNutriDATA:
 
