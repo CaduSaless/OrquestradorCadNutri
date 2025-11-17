@@ -40,6 +40,16 @@ services:
       - "5001:5000" 
     networks:
       - cadnutri_net
+  
+  CadNutriSubModulePeso:
+    build: ./CadNutriSubModulePeso
+    image: orquestradorcadnutri-cadnutrisubmodulepeso
+    container_name: CadNutriAppPeso
+    restart: unless-stopped
+    ports:
+      - "5002:5000" 
+    networks:
+      - cadnutri_net
 
 volumes:
   CadNutriDATA:
@@ -47,3 +57,4 @@ volumes:
 networks:
   cadnutri_net:
     driver: bridge
+
